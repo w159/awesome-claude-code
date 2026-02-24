@@ -141,7 +141,6 @@ jobs:
           PR_CONFIDENCE: ${{ steps.classify.outputs.confidence || '' }}
         with:
           script: |
-            const { Octokit } = require('@octokit/rest');
             const ops = new Octokit({ auth: process.env.OPS_TOKEN });
             const opsOwner = process.env.OPS_OWNER;
             const opsRepo = process.env.OPS_REPO;
